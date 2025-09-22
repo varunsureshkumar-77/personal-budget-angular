@@ -1,0 +1,70 @@
+.d3-chart-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.legend-container {
+  margin-bottom: 20px;
+}
+
+.legend-item {
+  margin: 5px 10px;
+  font-family: Arial, sans-serif;
+  transition: all 0.2s ease;
+}
+
+.legend-item:hover {
+  transform: translateY(-1px);
+  opacity: 0.8;
+}
+
+svg {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  min-width: 400px;
+  min-height: 400px;
+  display: block;
+}
+
+.slice {
+  stroke: #fff;
+  stroke-width: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slice:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+polyline {
+  opacity: 0.3;
+  stroke: black;
+  stroke-width: 1px;
+  fill: none;
+}
+
+text {
+  font-family: Arial, sans-serif;
+  pointer-events: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .d3-chart-container {
+    padding: 15px;
+  }
+  
+  svg {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
